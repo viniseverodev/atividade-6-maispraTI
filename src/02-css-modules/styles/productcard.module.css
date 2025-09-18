@@ -1,0 +1,175 @@
+@import "./root.module.css";
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.loading {
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.loading > * + * {
+  margin-top: 1rem;
+}
+
+.cardLoading {
+  width: 100%;
+  height: 12px;
+  border-radius: 0.5rem;
+}
+
+.skeletonContent > * + * {
+  margin-top: .5rem;
+}
+
+.skeletonLine {
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+}
+
+.h4 {
+  height: 1rem;
+}
+
+.h10 {
+  height: 2.5rem;
+}
+
+.w34 {
+  width: 75%;
+}
+
+.w13 {
+  width: 33.333333%;
+}
+
+.w12 {
+  width: 50%;
+}
+
+.wFull {
+  width: 100%;
+}
+
+.productCard {
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.productImageContainer {
+  position: relative;
+}
+
+.productTag {
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  background-color: #ff5643;
+  color: #fff;
+  font-size: .9rem;
+  padding: .5rem;
+  border-radius: 999px;
+}
+
+.produtctLink {
+  display: block;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.productImage{
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.productTitle {
+  color: #18181b;
+  font-size: 600;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.productPrice {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #18181b;
+  margin-top: .5rem;
+}
+
+.productRating {
+  color: #eab308;
+  margin-top: .5rem;
+}
+
+.buttonContainer {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.buttonBase {
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}
+
+.buttonBase:hover {
+  transform: translateY(-0.125rem);
+}
+
+.buttonBase:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.buttonSolid {
+  background-color: #ff5643;
+  color: #fff;
+  border: 1px solid #d35f52;
+}
+
+.buttonSolid:hover {
+  background-color: #ad392c;
+}
+
+.buttonOutline {
+  background-color: transparent;
+  color: #ff5643;
+  border: 1px solid #ff5643;
+}
+
+.buttonOutline:hover {
+  background-color: #ffc6c0;
+}
+
+.buttonGhost {
+  background-color: #fde1de;
+  color: #415445;
+  border: 1px solid #9e8a87;
+}
+
+.buttonGhost:hover {
+  background-color: #ebe7e5;
+}

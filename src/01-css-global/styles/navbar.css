@@ -1,0 +1,105 @@
+@import "./root.css";
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background-color: var(--bg-primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: .5rem;
+}
+
+.iconNav {
+  margin-right: .25rem;
+}
+
+.titleIcon {
+  font-weight: 600;
+}
+
+.actionNavigate {
+  display: inline-flex;
+  gap: 2rem;
+}
+
+.section {
+  display: inline-flex;
+  align-items: center;
+  padding: .25rem 1.5rem;
+  border-radius: 999px;
+  background-color: var(--color-zinc-200);
+  border: 1px solid var(--color-zinc-300);
+  cursor: pointer;
+}
+
+.navLink {
+  padding: .5rem 0 .5rem 0;
+  font-weight: 600;
+  transition-property: color;
+  transition-duration: 200ms;
+  color: #555;
+}
+
+.navLink:hover:not(.active){
+  color: #54cd66;
+}
+
+.navLink .active {
+  color: #333;
+}
+
+.textCatalog {
+  border-radius: 999px;
+}
+
+.textCatalog:hover{
+  color: #54cd66;
+  transition-delay: 150ms;
+}
+
+.toggle-theme-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-zinc-200);
+  border: 1px solid var(--color-zinc-300);
+  border-radius: 999px;
+  padding: 0 1rem 0 1rem;
+  cursor: pointer;
+  transition: background-color 0.5s 150ms;
+}
+
+.toggle-theme-button:hover {
+  background-color: var(--color-zinc-300);
+}
+
+.textButtonTheme {
+  font-weight: 600;
+  color: var(--color-zinc-900);
+}
+
+.cart {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-zinc-200);
+  border: 1px solid var(--color-zinc-300);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  gap: 1rem;
+  border-radius: 999px;
+}
+
+.textCart {
+  font-weight: 600;
+  color: var(--color-zinc-900);
+}

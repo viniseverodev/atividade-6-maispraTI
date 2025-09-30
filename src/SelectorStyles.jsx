@@ -21,11 +21,11 @@ const SelectorStyles = ({ activeStyle, onStyleChange }) => {
 
   return (
     <section className="dark:bg-neutral-900 py-3">
-      <div className="flex flex-col w-120 m-auto justify-center items-center rounded-md py-3 border-1 border-zinc-300 dark:border-zinc-600">
-        <h2 className="m-2 dark:text-zinc-100">
+      <div className="flex flex-col w-120 max-sm:w-80 m-auto justify-center items-center rounded-md py-3 border-1 border-zinc-300 dark:border-zinc-600">
+        <h2 className="m-2 dark:text-zinc-100 max-sm:text-sm max-sm:text-center">
           Selecione a Abordagem de Estilização
         </h2>
-        <div className="flex gap-1">
+        <div className="flex gap-1 max-sm:flex-col">
           {styles.map((style) => (
             <button
               key={style.id}

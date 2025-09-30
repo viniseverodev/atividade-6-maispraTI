@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -29,6 +29,19 @@ const StyledTitle = styled.span`
 const StyledActions = styled.nav`
   display: inline-flex;
   gap: 2rem;
+
+    @media (max-width: 512px) {
+    display: ${props => (props.menuOpen ? 'flex' : 'none')};
+    flex-direction: column;
+    position: absolute;
+    top: 42px;
+    right: 10px;
+    background: var(--bg-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    gap: 1rem;
+  }
 `;
 
 const StyledSection = styled.div`
@@ -83,6 +96,10 @@ const StyledToggleButton = styled.button`
 const StyledTextButton = styled.span`
   font-weight: 600;
   color: var(--text);
+
+  @media (max-width: 512px) {
+    padding: 0.5rem 0;
+  }
 `;
 
 const StyledCart = styled.div`
@@ -100,8 +117,34 @@ const StyledTextCart = styled.span`
   color: var(--text);
 `;
 
+const StyledHamburger = styled.button`
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--text);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  @media (max-width: 512px) {
+    display: flex;
+  }  
+`;
 
 export default function Navbar({ cartCount, theme, onToggleTheme }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <StyledHeader>
       <StyledNavbar>
@@ -110,7 +153,18 @@ export default function Navbar({ cartCount, theme, onToggleTheme }) {
           <StyledTitle>Shop</StyledTitle>
         </NavLink>
 
-        <StyledActions aria-label='Ações e navegações'>
+        <StyledHamburger
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={menuOpen}
+          aria-controls="menu"
+        >
+          <span />
+          <span />
+          <span />
+        </StyledHamburger>
+
+        <StyledActions menuOpen={menuOpen} aria-label='Ações e navegações'>
           <StyledSection aria-label='Seções'>
             <StyledNavLink to="#">
               <StyledTextCatalog>Catálogo</StyledTextCatalog>

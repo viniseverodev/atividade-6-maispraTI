@@ -9,6 +9,15 @@ const StyledSection = styled.section`
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
   padding: 1.25rem;
+
+    @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 512px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
 `;
 
 function HomeStyled({ products, onAdd, cartCount }) {

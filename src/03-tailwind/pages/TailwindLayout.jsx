@@ -43,7 +43,7 @@ function TailwindLayout({ products, onAdd, cartCount}) {
       <SelectorStyles />
 
       
-      <section className="dark:bg-neutral-900  grid grid-cols-3 gap-16 p-5" aria-label="Lista de produtos">
+      <section className="dark:bg-neutral-900  grid grid-cols-3 gap-16 p-5 max-md:grid-cols-2 max-sm:grid-cols-1" aria-label="Lista de produtos">
       {loading 
         ? Array.from({ length: 6 }).map((_, i) => (
             <ProductCard key={'skeleton-' + i} loading /> 

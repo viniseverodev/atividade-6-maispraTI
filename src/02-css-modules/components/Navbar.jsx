@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from '../styles/navbar.module.css'
 
 export default function Navbar({ cartCount, theme, onToggleTheme }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <header className={styles.header}>
       <div className={styles.navbar}>
@@ -11,7 +13,19 @@ export default function Navbar({ cartCount, theme, onToggleTheme }) {
           <span className={styles.titleIcon}>Shop</span>
         </NavLink>
 
-        <nav className={styles.actionNavigate} aria-label='Ações e navegações'>
+        <button
+          className={styles.hamburger}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={menuOpen}
+          aria-controls='menu'
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <nav id='menu' className={`${styles.actionNavigate} ${menuOpen ? styles.active : ""}`} aria-label='Ações e navegações'>
           <div className={styles.section} aria-label='Seções'>
             <NavLink to="#" className={styles.navLink} >
               <strong className={styles.textCatalog}>Catálogo</strong>

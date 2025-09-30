@@ -5,6 +5,7 @@ import styled from 'styled-components'
 const StyledHeader = styled.header`
   background-color: var(--bg-primary);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: var(--text);
 `;
 
 const StyledNavbar = styled.div`
@@ -61,6 +62,7 @@ const StyledTextCatalog = styled.strong`
     color: #952ff5;
     transition-delay: 150ms;
   }
+  color: var(--text);
 `;
 
 const StyledToggleButton = styled.button`
@@ -74,13 +76,13 @@ const StyledToggleButton = styled.button`
   transition: background-color 0.5s 150ms;
 
   &:hover {
-    background-color: var(--color-zinc-900);
+    background-color: var(--color-zinc-300);
   }
 `;
 
 const StyledTextButton = styled.span`
   font-weight: 600;
-  color: var(--color-zinc-900);
+  color: var(--text);
 `;
 
 const StyledCart = styled.div`
@@ -95,7 +97,7 @@ const StyledCart = styled.div`
 
 const StyledTextCart = styled.span`
   font-weight: 600;
-  color: var(--color-zinc-900);
+  color: var(--text);
 `;
 
 

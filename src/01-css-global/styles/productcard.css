@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  background-color: var(--bg)
 }
 
 .loading {
@@ -62,6 +63,7 @@ body {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   display: flex;
   flex-direction: column;
+  border: var(--borderCard);
 }
 
 .product-image-container {
@@ -100,7 +102,7 @@ body {
 }
 
 .product-title {
-  color: #18181b;
+  color: var(--text);
   font-size: 600;
 
   overflow: hidden;
@@ -112,7 +114,7 @@ body {
 .product-price {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #18181b;
+  color: var(--text);
   margin-top: .5rem;
 }
 

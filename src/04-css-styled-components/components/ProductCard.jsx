@@ -11,6 +11,7 @@ const StyledProductCard = styled.article`
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   display: flex;
   flex-direction: column;
+  border: var(--borderCard);
 `;
 
 const StyledLoadingCard = styled(StyledProductCard)`
@@ -90,7 +91,7 @@ const StyledFlexContainer = styled.div`
 `;
 
 const StyledProductTitle = styled.h2`
-  color: #18181b;
+  color: var(--text);
   font-weight: 600;
   overflow: hidden;
   display: -webkit-box;
@@ -101,7 +102,7 @@ const StyledProductTitle = styled.h2`
 const StyledProductPrice = styled.p`
   font-size: 1.25rem;
   font-weight: 700;
-  color: #18181b;
+  color: var(--text);
   margin-top: .5rem;
 `;
 
